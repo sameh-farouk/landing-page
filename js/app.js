@@ -32,7 +32,7 @@ let observer = new IntersectionObserver(entries => {
 document.addEventListener('DOMContentLoaded', () => {
     sections = document.querySelectorAll('section');
     const nav_li = document.querySelector('#navbar__list');
-    const nav_menu = document.querySelector('.navbar__menu');
+    const nav_header = document.querySelector('.page__header');
     /* build the nav */
     sections.forEach(element => {
         const title = element.dataset.nav;
@@ -61,14 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear our timeout throughout the scroll
         window.clearTimeout(isScrolling);
-        nav_menu.classList.remove('hide');
+        nav_header.classList.remove('hide');
 
         // Set a timeout to run after scrolling ends
         isScrolling = setTimeout(() => {
 
             // Run the callback
             if (window.scrollY !== 0) {
-                nav_menu.classList.add('hide');
+                nav_header.classList.add('hide');
             }
         }, 1500);
 
@@ -78,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear our timeout throughout the scroll
         window.clearTimeout(isMoving);
-        nav_menu.classList.remove('hide');
+        nav_header.classList.remove('hide');
 
         // Set a timeout to run after scrolling ends
         isMoving = setTimeout(() => {
 
             // Run the callback
             if (window.scrollY !== 0) {
-                nav_menu.classList.add('hide');
+                nav_header.classList.add('hide');
             }
         }, 1500);
 
