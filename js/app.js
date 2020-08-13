@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newNavItem = document.createElement('li');
         newNavItem.innerHTML = `<a class="menu__link ${element.id}" href="#${href}">${title}</a>`;
         nav_li.appendChild(newNavItem);
-        /* using new Intersection Observer API to check when section near the header 
-        https://usefulangle.com/post/118/javascript-intersection-observer */
+        /* using new Intersection Observer API to check when section near the header */
         observer.observe(element);
 
     })
