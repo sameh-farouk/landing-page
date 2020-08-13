@@ -10,3 +10,10 @@ as suggested: Add an active state to your navigation items when a section is in 
 as suggested: Hide fixed navigation bar while not scrolling
 ux: show navbar on mouse movemnet
 ux: add set of favicon
+
+##### credits
+Intersection Observer API
+- https://usefulangle.com/post/118/javascript-intersection-observer */
+
+scroll to element
+- https://usefulangle.com/post/156/javascript-scroll-to-element

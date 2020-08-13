@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(link);
             let section = document.querySelector(`${link}`);
             console.log(section);
-            /* https://usefulangle.com/post/156/javascript-scroll-to-element */
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         }
@@ -86,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
         isMoving = setTimeout(() => {
 
             // Run the callback
-            nav_menu.classList.add('hide');
+            if (window.scrollY !== 0) {
+                nav_menu.classList.add('hide');
+            }
         }, 1500);
 
     }, false)
